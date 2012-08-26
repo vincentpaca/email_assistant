@@ -1,3 +1,78 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$dark_blue: #374A5D;
+$gray: #262626;
+
+body{
+  background: $dark_blue;
+  font-family: Georgia, sans-serif;
+  font-size: 14px;
+  color: $gray;
+}
+
+.content {
+  height: 470px;
+  padding-top: 20px;
+  background: image-url('tiny_grid.png');
+}
+
+.logo a{
+  font-family: 'Leckerli One', cursive;
+  font-weight: 200;
+  font-size: 50px;
+  text-shadow: 0  1px 1px #ccc;
+  text-decoration: none;
+  letter-spacing: -1px;
+  color: $dark_blue;
+  
+  -webkit-transition-property:color, text; 
+  -webkit-transition-duration: .5s, .5s; 
+  -webkit-transition-timing-function: linear, ease-in;
+
+  -moz-transition-property:color, text; 
+  -moz-transition-duration:.5s; 
+  -moz-transition-timing-function: linear, ease-in; 
+
+  -o-transition-property:color, text; 
+  -o-transition-duration:.5s; 
+  -o-transition-timing-function: linear, ease-in;
+}
+
+.logo a:hover{
+  color:
+    darken($dark_blue, 10%);
+}
+
+.tag-line{
+  font-family: 'Capriola', sans-serif;
+  color:
+    lighten($gray, 20%);
+  margin-bottom: 40px;
+}
+
+$feature_width: 928px;
+
+.features {
+  width: $feature_width;
+  height: 370px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  padding: 15px;
+  
+  -moz-box-shadow: 0px 0px 3px $gray;
+  -webkit-box-shadow: 0px 0px 3px $gray;
+  box-shadow: 0px 0px 3px $gray;
+}
+
+span.feature-header {
+  font-family: 'Capriola', sans-serif;
+}
+
+.what-it-does {
+  float: left;
+  width: $feature_width / 2;
+}
+
+.what-it-doesnt-do {
+  float: left;
+  width: $feature_width / 2;
+}
